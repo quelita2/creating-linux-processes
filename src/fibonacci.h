@@ -1,38 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Função para calcular e exibir a série de Fibonacci
 void fibonacci() {
-	int *fib;
-	int num;
+	int *fib;      // Ponteiro para armazenar a série de Fibonacci
+	int num;       // Número de termos desejados na série
 	int i;
 
-	printf("\nDigite quantidade de termos para exibir na serie de Fibonacci: ");
+	// Solicita ao usuário o número de termos a serem exibidos
+	printf("\nDigite a quantidade de termos para exibir na série de Fibonacci: ");
 	scanf("%d", &num);
 
+	// Verifica se o número de termos é válido
 	if (num <= 0) {
-		printf("\nQuantidade de termos deve ser um numero positivo e nao-nulo!\n");
-		return 1;
+		printf("\nA quantidade de termos deve ser um número positivo e não nulo!\n");
+		return;  // Encerra a função se o número de termos não for válido
 	}
 
+	// Aloca dinamicamente memória para armazenar os termos da série
 	fib = (int *) calloc(num, sizeof(int));
 
-	if(!fib){
-		printf("\nSem espaco suficiente na memoria para armazenar os termos da Serie de Fibonacci!\n");
-		return 1;
+	// Verifica se a alocação de memória foi bem-sucedida
+	if (!fib) {
+		printf("\nNão há memória suficiente para armazenar os termos da série de Fibonacci!\n");
+		return;  // Encerra a função se a alocação de memória falhou
 	}
 
+	// Inicializa os dois primeiros termos da série
 	fib[0] = 0;
 	fib[1] = 1;
 
-	for(i=2; i<num; i++){
-		fib[i] = fib[i-1] + fib[i-2];
+	// Calcula os termos restantes da série
+	for (i = 2; i < num; i++) {
+		fib[i] = fib[i - 1] + fib[i - 2];
 	}
 
+	// Exibe os termos da série de Fibonacci
 	printf("\n\t\t");
-	for(i=0; i<num; i++){
+	for (i = 0; i < num; i++) {
 		printf(" %d ", fib[i]);
 	}
 	printf("\n\n");
 
+	// Libera a memória alocada dinamicamente
 	free(fib);
 }
