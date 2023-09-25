@@ -14,6 +14,11 @@ Por fim, por razões de sincronização, o processo pai deve executar a chamada 
 
 Considerando os códigos-fontes, mais expecificamente os arquivos “estrutura fundamental (criação de processos)” e “Série de Fibonacci (arquivo fonte)”, foi elaborado um programa, em linguagem C/C++, para sistemas Linux, em que um processo recebe um número inteiro positivo (total de termos da série de Fibonacci), cria um processo filho e se bloqueis através da função wait(). O processo filho criado deve, então, a partir do total de termos da série de Fibonacci, gerar e exibir estes termos, finalizando, assim, sua execução.
 
+## Execução
+
+![image](https://github.com/quelita2/creating-linux-processes/assets/61879771/4d134b16-5272-4960-8bc2-7aeffd98822e)
+
+
 ---
 <div align="center">
   Sistema Operacional (DCA0108)
