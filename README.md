@@ -22,6 +22,8 @@ Considerando os códigos-fontes, mais expecificamente os arquivos “estrutura f
 ---
 <div align="center">
   Sistema Operacional (DCA0108)
+
+  Departamento de Engenharia de Computação e Automação (DCA)
   
-  Universidade Federal do Rio Grande do Norte (UFRN), Departamento de Engenharia de Computação e Automação (DCA).
+  Universidade Federal do Rio Grande do Norte (UFRN)
 </div>
